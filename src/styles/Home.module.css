@@ -245,8 +245,20 @@ color: #fff;
 
 /* Mobile */
 @media (max-width: 700px) {
+
+  .container_personagem, .personagem{
+    width: 100%;
+    margin: 0px;
+  }
+
+  .headerzin > nav{
+    display: none;
+  }
+
   .headerzin{
-    margin: 0 24px;
+    /* margin: 0 24px; */
+    display: flex;
+    justify-content: center;
   }
 
   .content {
