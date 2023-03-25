@@ -1,10 +1,75 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+}
+
+.header{
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+background-color: var(--cor-fundo);
+z-index: 999;
+padding: 15px 24px;
+color: #fff;
+}
+
+
+.container_personagem {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.overlay h2,
+.overlay p {
+  color: #fff;
+  text-align: center;
+  margin: 0;
+}
+
+.container_personagem:hover .overlay {
+  opacity: 1;
+}
+
+.headerzin{
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  margin: 0 10%;
+}
+
+.listHeader{
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+.personagens{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.personagem{
+  margin: 0 5px 5px;
 }
 
 .description {
@@ -17,6 +82,11 @@
   z-index: 2;
   font-family: var(--font-mono);
 }
+
+.color-rick{
+
+}
+
 
 .description a {
   display: flex;
@@ -175,6 +245,10 @@
 
 /* Mobile */
 @media (max-width: 700px) {
+  .headerzin{
+    margin: 0 24px;
+  }
+
   .content {
     padding: 4rem;
   }
